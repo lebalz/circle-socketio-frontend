@@ -1,0 +1,88 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#dashboard {
+  display: grid;
+  grid-template-columns: repeat(50, 10px);
+  grid-auto-rows: 10px;
+  gap: 5px;
+  grid-auto-flow: dense;
+  margin: 5em;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(0.5);
+    box-shadow: 0 0 0px black;
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px black;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  animation: zoomIn 1s ease 0s 1;
+}
+
+.circle.animated {
+  animation: zoomAnimation 0.5s ease 0s infinite alternate;
+}
+
+.circle:hover {
+  box-shadow: 0 0 5px black;
+}
+
+.circle-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid silver;
+}
+
+.preview-wrapper > .circle {
+  cursor: unset;
+}
+.preview-wrapper > .circle:hover {
+  box-shadow: 0 0 0px;
+}
+
+button {
+  margin-top: 8px;
+  width: 100px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 1px solid gray;
+  box-shadow: 0 0 5px black;
+}
