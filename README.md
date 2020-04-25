@@ -31,4 +31,6 @@ yarn start
 
 2. Copy the URL of the *Circle-Server Sandbox* instance. You then have to replace the `CIRCLE_SERVER_URL` in `App.js`.
 
-![config](docs/circle-frontend-config.gif)
+    !! The URL shall not have a trailing slash `/`
+
+    ![config](docs/circle-frontend-config.gif)
